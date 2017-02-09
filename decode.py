@@ -9,10 +9,20 @@ import sys
 import algorithms.core as core
 from algorithms.cipher import *
 
+# Dynamic input processing
 text = sys.argv[1]
-p2 = sys.argv[2]
+if len(sys.argv) == 3:
+	p2 = sys.argv[2]
 
-print 
+# Input parser for every module
+## Caesar
+try:
+	var_caesar = [text,p2]
+except:
+	var_caesar = [text]
+
+
 
 core.first_analysis(text)
-caesar.decode(text,p2)
+
+caesar.decode(var_caesar)

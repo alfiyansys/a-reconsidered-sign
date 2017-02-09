@@ -20,8 +20,15 @@ def caesar(text, shift):
 			trans += char
 	return trans
 
-def decode(text, shift=None):
+def decode(input):
+	text = input[0]
+	try:
+		shift = input[1]
+	except:
+		shift = None
+
 	core.separator()
+	
 	print "CAESAR CIPHER"
 	text = str.upper(text)
 	print "Converting to uppercase...", text
