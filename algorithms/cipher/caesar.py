@@ -33,4 +33,5 @@ def decode(text, shift=None):
 		for i in range(1,26):
 			print caesar(text,i)
 	else:
-		print "Using",shift
+		print "Using",shift,"shift"
+		print caesar(text,int(shift))
